@@ -74,6 +74,9 @@ h2 { margin: 0; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: -.04em; }
 .count, .version { padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink-soft); background: rgba(255,255,255,.72); font-size: .78rem; font-weight: 750; white-space: nowrap; }
 
 .mod-card { display: grid; grid-template-columns: minmax(0, 1.13fr) minmax(340px, .87fr); overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: 0 18px 60px rgba(17,24,32,.08); }
+.mod-card + .mod-card { margin-top: 34px; }
+.mod-card--reverse { grid-template-columns: minmax(340px, .87fr) minmax(0, 1.13fr); }
+.mod-card--reverse .feature-image { order: 2; }
 .feature-image { position: relative; min-height: 520px; padding: 0; border: 0; overflow: hidden; background: #202830; cursor: zoom-in; }
 .feature-image img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s ease; }
 .feature-image:hover img { transform: scale(1.025); }
@@ -108,6 +111,7 @@ footer { display: flex; justify-content: space-between; gap: 25px; padding: 28px
   .intro { grid-template-columns: 1fr; }
   .intro-badge { display: none; }
   .mod-card { grid-template-columns: 1fr; }
+  .mod-card--reverse .feature-image { order: 0; }
   .feature-image { min-height: 0; aspect-ratio: 16 / 9; }
 }
 
